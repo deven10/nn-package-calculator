@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link
+      rel="shortcut icon"
+      href="https://www.neelnetworks.com/assets/images/favicon.png"
+      type="image/x-icon"
+    />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Our Packages</title>
@@ -40,59 +45,70 @@
       <h3 class="page-title">Our Packages</h3>
       <form class="form">
         <div class="group">
-          <div class="mb-3 form-select-group">
-            <div class="input-group-prepend">
-              <label
-                class="form-label"
-                class="input-group-text"
-                for="industry_category"
+          <div class="form-select-group-wrapper">
+            <div class="form-select-group">
+              <div class="input-group-prepend">
+                <label
+                  class="form-label"
+                  class="input-group-text"
+                  for="industry_category"
+                >
+                  Select the Services:
+                </label>
+              </div>
+              <select
+                name="select category"
+                class="custom-select form-select"
+                id="industry_category"
+                onchange="onFirstSelectChange()"
               >
-                Select the service that best describes your business:
-              </label>
+                <option value="" selected>Select a Service</option>
+                <option value="Standard Website" selected>
+                  Standard Website
+                </option>
+                <option value="CMS Website">CMS Website</option>
+                <option value="E-commerce Website">E-commerce Website</option>
+              </select>
             </div>
-            <select
-              name="select category"
-              class="custom-select form-select"
-              id="industry_category"
-              onchange="onFirstSelectChange()"
-            >
-              <option value="" selected>Select a Service</option>
-              <option value="Standard Website">Standard</option>
-              <option value="CMS Website">CMS</option>
-              <option value="E-commerce Website">E-commerce</option>
-            </select>
-          </div>
-          <div class="mb-3 form-select-group">
-            <div class="input-group-prepend">
-              <label
-                class="form-label"
-                class="input-group-text"
-                for="industry_sub_category"
+            <div class="form-select-group">
+              <div class="input-group-prepend">
+                <label
+                  class="form-label"
+                  class="input-group-text"
+                  for="industry_sub_category"
+                >
+                  Select the Package:
+                </label>
+              </div>
+              <select
+                name="select category"
+                class="custom-select form-select"
+                id="industry_sub_category"
+                onchange="onSecondSelectChange()"
               >
-                Select the most suitable package for your needs:
-              </label>
+                <option value="">Select a Package</option>
+                <option value="Single Page Website">Single Page Website</option>
+                <option value="Standard Website" selected>
+                  Standard Website
+                </option>
+                <option value="Professional Business Website">
+                  Professional Business Website
+                </option>
+              </select>
             </div>
-            <select
-              name="select category"
-              class="custom-select form-select"
-              id="industry_sub_category"
-              onchange="onSecondSelectChange()"
-            >
-              <option value="" selected>Select a Package</option>
-            </select>
           </div>
-          <div class="mb-3 form-select-group">
+          <div class="form-select-group">
             <div class="price-wrapper">
               <p class="package-price">
                 <span class="currency-icon">$</span>
-                <span class="total-package-price">499</span>
+                <span class="total-package-price">150</span>
               </p>
             </div>
           </div>
         </div>
         <div class="package-details">
           <div class="package-title-details">
-            <p class="package-title">Standard Informative Website</p>
+            <p class="package-title">Standard Website</p>
             <p class="package-description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Recusandae totam laborum voluptates eius tempora temporibus, omnis
@@ -108,21 +124,87 @@
             </p>
             <ul class="features-ul pl-65px">
               <li class="features-li">
-                <p class="content">Domain & Hosting Provided</p>
+                <p class="content">Domain Registration</p>
                 <p class="sub-content">
-                  Domain will help you to recognize your brand publicliy.....
+                  Domain registration services for popular extensions such as
+                  .com, .net, .org, .in, and more...
                 </p>
               </li>
               <li class="features-li">
-                <p class="content">Domain & Hosting Provided</p>
+                <p class="content">2 GB Web Hosting with SSL</p>
                 <p class="sub-content">
-                  Domain will help you to recognize your brand publicliy.....
+                  Get reliable web hosting with business email and SSL
+                  (https://) setup
                 </p>
               </li>
               <li class="features-li">
-                <p class="content">Domain & Hosting Provided</p>
+                <p class="content">5 Web Pages Creation</p>
                 <p class="sub-content">
-                  Domain will help you to recognize your brand publicliy.....
+                  We'll create a unique custom webpage with html/css/php/jQuery
+                  to meet your website and business needs.
+                </p>
+              </li>
+              <li class="features-li">
+                <p class="content">Mobile Friendly Design</p>
+                <p class="sub-content">
+                  Get a mobile-friendly website with responsive design for
+                  seamless browsing on any mobile device.
+                </p>
+              </li>
+              <li class="features-li">
+                <p class="content">Professional Web Design</p>
+                <p class="sub-content">
+                  Creative, functional, and impressive web design services for a
+                  lasting impact.
+                </p>
+              </li>
+              <li class="features-li">
+                <p class="content">Animated Images Slider on Homepage</p>
+                <p class="sub-content">
+                  Dynamic animated images slider showcasing a series of visually
+                  appealing and eye-catching images that slides smoothly, adding
+                  an interactive and engaging element to the website's first
+                  impression.
+                </p>
+              </li>
+              <li class="features-li">
+                <p class="content">Google Analytics Setup</p>
+                <p class="sub-content">
+                  Google Analytics setup to gather insightful data and analytics
+                  about its performance, user behavior, traffic sources, and
+                  other essential metrics.
+                </p>
+              </li>
+              <li class="features-li">
+                <p class="content">XML Sitemap Creation & Submission</p>
+                <p class="sub-content">
+                  We create and submit XML Sitemap to search engines, ensuring
+                  your website's pages are effectively indexed and easily found
+                  by potential customers.
+                </p>
+              </li>
+              <li class="features-li">
+                <p class="content">Social Media Integration</p>
+                <p class="sub-content">
+                  We'll incorporate social media icons on your website, linking
+                  them to your respective social profiles, enabling easy
+                  engagement with your audience across platforms.
+                </p>
+              </li>
+              <li class="features-li">
+                <p class="content">Inquiry/Contact Form</p>
+                <p class="sub-content">
+                  Add a user-friendly Inquiry/Contact Form to streamline
+                  communication and capture potential customer inquiries on your
+                  website.
+                </p>
+              </li>
+              <li class="features-li">
+                <p class="content">Lifetime Technical Support</p>
+                <p class="sub-content">
+                  Free technical support for as long as your website remains
+                  under our care and control, ensuring reliable assistance and
+                  resolving any technical issues that may arise.
                 </p>
               </li>
             </ul>
@@ -156,7 +238,7 @@
                 onchange="handlePriceConverter()"
                 class="price-converter-select"
               >
-                <option value="USD">USD</option>
+                <option value="USD" selected>USD</option>
                 <option value="INR">INR</option>
                 <option value="CAD">CAD</option>
                 <option value="AUD">AUD</option>
@@ -165,106 +247,8 @@
               </select>
               <p class="converted-price">
                 <span class="currency-icon">$</span>
-                <span class="total-package-price"> 499 </span>
+                <span class="total-package-price"> 150 </span>
               </p>
-            </div>
-          </section>
-
-          <!-- Payment Stepper Section -->
-          <section class="package-payment-terms package-detail-section">
-            <p class="heading">
-              Payment Milestones
-              <img src="./images/payment-terms-1.svg" alt="payment-terms" />
-            </p>
-
-            <div class="progress-wrapper">
-              <div id="progress-bar-container">
-                <ul class="payment-stepper-ul">
-                  <li class="step step01 active">
-                    <div class="step-inner">Step 1</div>
-                  </li>
-                  <li class="step step02">
-                    <div class="step-inner">Step 2</div>
-                  </li>
-                  <li class="step step03">
-                    <div class="step-inner">Step 3</div>
-                  </li>
-                  <li class="step step04">
-                    <div class="step-inner">Step 4</div>
-                  </li>
-                  <li class="step step05">
-                    <div class="step-inner">Step 5</div>
-                  </li>
-                </ul>
-                <div id="line">
-                  <div id="line-progress"></div>
-                </div>
-                <div id="progress-content-section">
-                  <div class="section-content step1 active">
-                    <h2>Step 1</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Repellat, impedit! Lorem ipsum dolor sit amet consectetur,
-                      adipisicing elit. Necessitatibus, soluta impedit. Eligendi
-                      aliquam ratione porro minus temporibus facilis iure
-                      numquam.
-                    </p>
-                  </div>
-                  <div class="section-content step2">
-                    <h2>Step 2</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Repellat, impedit! Lorem ipsum dolor sit amet consectetur,
-                      adipisicing elit. Necessitatibus, soluta impedit. Eligendi
-                      aliquam ratione porro minus temporibus facilis iure
-                      numquam. Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Repellat, impedit! Lorem ipsum dolor sit
-                      amet consectetur, adipisicing elit. Necessitatibus, soluta
-                      impedit. Eligendi aliquam ratione porro minus temporibus
-                      facilis iure numquam.
-                    </p>
-                  </div>
-                  <div class="section-content step3">
-                    <h2>Step 3</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Repellat, impedit! Lorem ipsum dolor sit amet consectetur,
-                      adipisicing elit. Necessitatibus, soluta impedit. Eligendi
-                      aliquam ratione porro minus temporibus facilis iure
-                      numquam. Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Repellat, impedit! Lorem ipsum dolor sit
-                      amet consectetur, adipisicing elit. Necessitatibus, soluta
-                      impedit. Eligendi aliquam ratione porro minus temporibus
-                      facilis iure numquam. Lorem ipsum dolor sit amet
-                      consectetur adipisicing elit. Repellat, impedit! Lorem
-                      ipsum dolor sit amet consectetur, adipisicing elit.
-                      Necessitatibus, soluta impedit. Eligendi aliquam ratione
-                      porro minus temporibus facilis iure numquam.
-                    </p>
-                  </div>
-                  <div class="section-content step4">
-                    <h2>Step 4</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Repellat, impedit! Lorem ipsum dolor sit amet consectetur,
-                      adipisicing elit. Necessitatibus, soluta impedit. Eligendi
-                      aliquam risicing elit. Necessitatibus, soluta impedit.
-                      Eligendi aliquam ratione porro minus temporibus facilis
-                      iure numquam.
-                    </p>
-                  </div>
-                  <div class="section-content step5">
-                    <h2>Step 5</h2>
-                    <p>
-                      Lquam. Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Repellat, impedit! Lorem ipsum dolor sit amet
-                      consectetur, adipisicing elit. Necessitatibus, soluta
-                      impedit. Eligendi aliquam ratione porro minus temporibus
-                      facilis iure numquam.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </section>
 
@@ -291,35 +275,19 @@
               </a>
             </div>
           </section>
-
-          <!-- Renewal Section -->
-          <section class="package-renewal package-detail-section">
-            <p class="heading">
-              Renewal <img src="./images/renewal-1.svg" alt="renewal" />
-            </p>
-            <p class="content pl-65px">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea
-              temporibus consequatur quis magni? Rerum, alias!
-            </p>
-          </section>
         </div>
+
+        <footer id="contactUsFooter">
+          <button class="interested-btn">
+            I am Interested in this Package
+          </button>
+        </footer>
 
         <hr class="divider" />
-        <div class="group services-group">
-          <div class="services-offered">
-            <div class="service-details">
-              <p class="price"></p>
-              <p class="title"></p>
-              <p class="description"></p>
-            </div>
-            <ul class="services-wrapper"></ul>
-          </div>
-        </div>
       </form>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="app.js"></script>
-    <script src="./stepper.js"></script>
   </body>
 </html>
