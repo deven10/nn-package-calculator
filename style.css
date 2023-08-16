@@ -308,9 +308,9 @@ li.features-li::before{
     font-family: var(--primary-heading-font);
 }
 .package-description{
-    font-size: 14px;
+    font-size: 15px;
     font-family: var(--secondary-heading-font);
-    line-height: 1.2;
+    line-height: 1.35;
     width: 90%;
     font-weight: 400;
     color: #0b1238;
@@ -355,10 +355,10 @@ p.heading img {
 
 .sub-content {
     margin: 0;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
     font-family: var(--secondary-heading-font);
-    line-height: 1.25;
+    line-height: 1.35;
     color: #0b1238;
     padding-bottom: 8px;
     letter-spacing: 1px;

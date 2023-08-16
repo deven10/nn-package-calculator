@@ -9,9 +9,16 @@ const packagePriceAmount = document.querySelector("#price-converter-select"); //
 
 const featuresUL = document.querySelector(".features-ul");
 
+const packageDescriptionTag = document.querySelector(".package-description"); // package description text tag
+const projectTimelineTag = document.querySelector(".project-timeline"); // project time line text tag
+
 let initialSelectedData = {
   category: "Standard Website",
   subCategory: "Standard Website",
+  packageDescription:
+    "Our standard website package offers a larger canvas to organize your content, enabling clear sections for different purposes. This helps users engage better, find information easily, and navigate through your offerings smoothly.",
+  projectTimeline:
+    "We can create this type of website for you within 5 working days, ensuring a swift and efficient process.",
   price: 150,
   features: [
     {
@@ -86,8 +93,8 @@ const cmsWebsiteOffers = [
 ];
 // E-Commerce website offers dataset
 const eCommerceWebsiteOffers = [
-  "$500 - Standard Ecommerce Website",
-  "$900 - Standard Ecommerce Website",
+  "Standard Ecommerce Website",
+  "Premium Ecommerce Website",
 ];
 
 //  All the services dataset offered by us
@@ -98,6 +105,10 @@ const dataset = [
       {
         name: "Single Page Website",
         price: 65,
+        packageDescription:
+          "Neel Networks offers cost-effective expertise in crafting single-page websites for just $65, ensuring efficient content integration, intuitive design, and smooth navigation, resulting in a compelling online presence.",
+        projectTimeline:
+          "We can create a single-page website within 2 working days, ensuring a rapid and efficient turnaround.",
         features: [
           {
             heading: "Domain Registration",
@@ -134,6 +145,10 @@ const dataset = [
       {
         name: "Standard Website",
         price: 150,
+        packageDescription:
+          "Our standard website package offers a larger canvas to organize your content, enabling clear sections for different purposes. This helps users engage better, find information easily, and navigate through your offerings smoothly.",
+        projectTimeline:
+          "We can create this type of website for you within 5 working days, ensuring a swift and efficient process.",
         features: [
           {
             heading: "Domain Registration",
@@ -195,6 +210,10 @@ const dataset = [
       {
         name: "Professional Business Website",
         price: 300,
+        packageDescription:
+          "Neel Networks delivers a polished professional business website that showcases your company's essence, services, and contact information in a sleek and user-friendly format, helping you make a strong online impression.",
+        projectTimeline:
+          "We can build your professional business website in a maximum of 10 working days, ensuring a timely and effective online presence for your company.",
         features: [
           {
             heading: "Domain Registration",
@@ -276,6 +295,10 @@ const dataset = [
       {
         name: "Basic CMS Website",
         price: 200,
+        packageDescription:
+          "Neel Networks offers a simple and effective CMS WordPress website, with around 5 pages. You'll be able to easily handle and update your content. Our aim is to create a professional online space for your business.",
+        projectTimeline:
+          "We can create this website in a maximum of 5 working days, ensuring a speedy setup for your Simple CMS WordPress site.",
         features: [
           {
             heading: "Domain Registration",
@@ -342,6 +365,10 @@ const dataset = [
       {
         name: "Standard CMS Website",
         price: 350,
+        packageDescription:
+          "Neel Networks offers a comprehensive Standard CMS WordPress website package, featuring around 15 pages and a fully set up blog. This solution empowers you to manage your content effortlessly.",
+        projectTimeline:
+          "We can create this website for you in a maximum of 10 working days, ensuring a prompt setup for your Standard CMS WordPress site with a blog.",
         features: [
           {
             heading: "Domain Registration",
@@ -423,6 +450,10 @@ const dataset = [
       {
         name: "Premium CMS Website",
         price: 500,
+        packageDescription:
+          "A feature-rich CMS WordPress website with approximately 20 pages, including a blog setup. We go the extra mile by providing exclusive online training to help you confidently manage the WordPress CMS system.",
+        projectTimeline:
+          "We can develop this website for you within 15 working days, offering an exclusive online training to master the WordPress CMS system.",
         features: [
           {
             heading: "Domain Registration",
@@ -522,8 +553,12 @@ const dataset = [
     category: "E-commerce Website",
     subCategories: [
       {
-        name: "$500 - Standard Ecommerce Website",
+        name: "Standard Ecommerce Website",
         price: 500,
+        packageDescription:
+          "Our standard ecommerce website comes with an ecommerce powerpack, accommodating 50 products and categories for a diverse online store. We ensure full mobile responsiveness, delivering a seamless shopping experience across devices.",
+        projectTimeline:
+          "We can develop this comprehensive Ecommerce website, complete with Ecommerce Powerpack, 50 products & categories within just 10 working days. Your online store will be up and running in no time.",
         features: [
           {
             heading: "Domain Registration",
@@ -613,8 +648,12 @@ const dataset = [
         ],
       },
       {
-        name: "$900 - Standard Ecommerce Website",
+        name: "Premium Ecommerce Website",
         price: 900,
+        packageDescription:
+          "Our premium ecommerce website includes an advanced Powerpack for unlimited products and categories, coupled with comprehensive online training to effortlessly manage and add products. Anticipate a top-tier, customised Ecommerce platform.",
+        projectTimeline:
+          "We can create this advanced premium ecommerce website within a span of just 15 days. Get ready to launch your feature-rich online store in no time.",
         features: [
           {
             heading: "Domain Registration",
@@ -757,7 +796,7 @@ function createOptions(service) {
 
   const option = document.createElement("option");
   option.value = "";
-  option.textContent = "Select an Option";
+  option.textContent = "Select a Package";
   secondSelect.appendChild(option);
 
   offers.map((offer) => {
@@ -781,7 +820,7 @@ function onFirstSelectChange() {
       createOptions("E-commerce Website");
       break;
     default:
-      secondSelect.innerHTML = `<option value="" selected>Select Industry....</option>`;
+      secondSelect.innerHTML = `<option value="" selected>Select Package....</option>`;
       break;
   }
 }
@@ -801,14 +840,28 @@ function onSecondSelectChange() {
     category: object.category,
     subCategory: actualData.name,
     price: actualData.price,
+    packageDescription: actualData.packageDescription,
+    projectTimeline: actualData.projectTimeline,
     features: [...actualData.features],
   };
 
-  updateChanges(actualData.name, actualData.price, actualData.features);
+  updateChanges(
+    actualData.name,
+    actualData.price,
+    actualData.features,
+    actualData.packageDescription,
+    actualData.projectTimeline
+  );
 }
 
 // helper function to update the changes on UI
-function updateChanges(titleOfPackage, priceOfPackage, featuresOfPackage) {
+function updateChanges(
+  titleOfPackage,
+  priceOfPackage,
+  featuresOfPackage,
+  newPackageDescription,
+  newProjectTimeline
+) {
   packagePrice[0].innerHTML = priceOfPackage;
   packagePrice[1].innerHTML = priceOfPackage;
 
@@ -816,6 +869,11 @@ function updateChanges(titleOfPackage, priceOfPackage, featuresOfPackage) {
   currencyIcon[1].innerHTML = "$";
 
   packageTitle.innerHTML = titleOfPackage;
+
+  console.log(newPackageDescription, newProjectTimeline);
+
+  packageDescriptionTag.innerHTML = newPackageDescription;
+  projectTimelineTag.innerHTML = newProjectTimeline;
 
   featuresUL.innerHTML = featuresOfPackage
     .map(
