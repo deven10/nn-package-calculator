@@ -833,8 +833,6 @@ function onSecondSelectChange() {
     ({ name }) => name === secondSelect.value
   );
 
-  console.log("data: ", actualData);
-
   // setting the initial selected data
   initialSelectedData = {
     category: object.category,
@@ -869,8 +867,6 @@ function updateChanges(
   currencyIcon[1].innerHTML = "$";
 
   packageTitle.innerHTML = titleOfPackage;
-
-  console.log(newPackageDescription, newProjectTimeline);
 
   packageDescriptionTag.innerHTML = newPackageDescription;
   projectTimelineTag.innerHTML = newProjectTimeline;
@@ -943,4 +939,10 @@ function handlePriceConverter() {
       currencyIcon[1].innerHTML = "$";
       break;
   }
+}
+
+// fn for handling I'm Interested button
+function handlePackageForm() {
+  const res = `Selected Package is ${packageTitle.innerHTML}`;
+  console.log(res);
 }

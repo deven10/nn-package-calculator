@@ -43,7 +43,7 @@
   <body>
     <div class="main">
       <h3 class="page-title">Our Packages</h3>
-      <form class="form">
+      <form class="form" onsubmit="handlePackageForm(); return false">
         <div class="group">
           <div class="form-select-group-wrapper">
             <div class="form-select-group">
@@ -279,7 +279,7 @@
         </div>
 
         <footer id="contactUsFooter">
-          <button class="interested-btn">
+          <button class="interested-btn" type="submit">
             I am Interested in this Package
           </button>
         </footer>
