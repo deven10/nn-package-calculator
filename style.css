@@ -128,7 +128,7 @@ ul.features-ul{
     position: relative;
 }
 li.features-li{
-    padding: 0px 0px 8px 0px;
+    padding: 0px 0px 15px 0px;
 }
 li.features-li::before{
     content: '';
@@ -186,7 +186,7 @@ li.features-li::before{
 }
 
 .form-select-group-wrapper .form-select-group {
-    width: 100% !important;
+    width: 70% !important;
 }
 
 .form-select-group{
@@ -247,8 +247,8 @@ li.features-li::before{
 .price-wrapper {
     position: absolute;
     background-color: #FAA31F;
-    height: 300px;
-    width: 350px;
+    height: 325px;
+    width: 400px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 50%;
     border-top-left-radius: 50%;
@@ -328,7 +328,7 @@ li.features-li::before{
     font-size: 28px;
     font-weight: 600;
     line-height: 1;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     color: #0B1238;
     letter-spacing: .5px;
     font-family: var(--primary-heading-font);
@@ -344,23 +344,22 @@ p.heading img {
 
 .content {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
     font-family: var(--secondary-heading-font);
     line-height: 1.25;
     color: #0B1238;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
     letter-spacing: .25px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .sub-content {
     margin: 0;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     font-family: var(--secondary-heading-font);
     line-height: 1.35;
     color: #0b1238;
-    padding-bottom: 8px;
     letter-spacing: 1px;
 }
 
